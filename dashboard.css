@@ -1,0 +1,233 @@
+/* === DASHBOARD THEME (BRIDGELOOP STYLE) === */
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 30px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-header img {
+  height: 40px;
+}
+
+.sidebar-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #234567;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.sidebar-menu a.active,
+.sidebar-menu a:hover {
+  background: #00c9c8;
+  color: #fff;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.dashboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-topbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-right i {
+  font-size: 20px;
+  color: #444;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  background: transparent;
+}
+
+.search-bar i {
+  font-size: 20px;
+  color: #888;
+  margin-right: 10px;
+}
+
+/* Class + Meeting Row */
+.dashboard-actions {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.action-box {
+  flex: 1;
+  min-width: 200px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.action-box:hover {
+  transform: translateY(-4px);
+}
+
+.action-box h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #234567;
+}
+
+.action-box p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* All Courses Section */
+
+.all-courses h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #234567;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Always 3 per row */
+  gap: 24px;  /* Add spacing between cards */
+}
+
+.course-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+}
+
+.course-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.course-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.enroll-btn,
+.remove-btn {
+  background-color: #2fcad5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.enroll-btn:hover,
+.remove-btn:hover {
+  background-color: #1aaab0;
+}
+
+.remove-btn {
+  background-color: #ff6b6b;
+  margin-top: 10px;
+}
+
+.remove-btn:hover {
+  background-color: #e04848;
+}

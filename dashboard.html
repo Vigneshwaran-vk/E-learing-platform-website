@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register | SkillShare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="dashboard.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="assets/Logo.jpeg" alt="Bridgeloop Logo">
+      </div>
+      <nav class="sidebar-menu">
+        <a href="#" class="active"><i class="ri-dashboard-line"></i> Dashboard</a>
+        <a href="courses.html"><i class="ri-book-open-line"></i> Courses</a>
+        <a href="#"><i class="ri-task-line"></i> Assignments</a>
+        <a href="#"><i class="ri-questionnaire-line"></i> Quizzes</a>
+        <a href="#"><i class="ri-bar-chart-box-line"></i> Results</a>
+        <a href="#"><i class="ri-settings-3-line"></i> Settings</a>
+        <a href="landing.html"><i class="ri-logout-box-line"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Top Bar -->
+      <header class="dashboard-topbar">
+        <h1>Welcome back, Vigneshwaran</h1>
+        <div class="topbar-right">
+          <i class="ri-notification-2-line"></i>
+          <img src="assets/user-1.jpg" alt="User Profile" class="profile-img">
+        </div>
+      </header>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <i class="ri-search-line"></i>
+        <input type="text" placeholder="Search courses, topics, or assignments...">
+      </div>
+
+      <!-- Class & Meeting Actions -->
+      <section class="dashboard-actions">
+        <div class="action-box">
+          <h3>Live Classes</h3>
+          <p>Join or schedule class sessions</p>
+        </div>
+        <div class="action-box">
+          <h3>Start Meeting</h3>
+          <p>Launch quick 1-on-1 discussions</p>
+        </div>
+      </section>
+
+      <div class="main-area">
+    <h2>Your Enrolled Courses</h2>
+    <div class="course-grid" id="enrolledCoursesContainer"></div>
+  </div>
+</div>
+
+<script>
+  const container = document.getElementById("enrolledCoursesContainer");
+
+  function renderEnrolledCourses() {
+    const enrolled = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+    container.innerHTML = "";
+
+    if (enrolled.length === 0) {
+      container.innerHTML = "<p>You haven't enrolled in any courses yet.</p>";
+      return;
+    }
+
+    enrolled.forEach(course => {
+      const card = document.createElement("div");
+      card.className = "course-card";
+      card.innerHTML = `
+        <img src="${course.image}" alt="${course.title}">
+        <h4>${course.title}</h4>
+        <p>Currently In Progress</p>
+        <button class="enroll-btn remove" data-title="${course.title}">Remove</button>
+      `;
+      container.appendChild(card);
+    });
+
+    // Add remove functionality
+    document.querySelectorAll(".remove").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const title = btn.dataset.title;
+        let updated = enrolled.filter(c => c.title !== title);
+        localStorage.setItem("enrolledCourses", JSON.stringify(updated));
+        renderEnrolledCourses();
+      });
+    });
+
+    const card = document.createElement("div");
+card.className = "course-card";
+card.innerHTML = `
+  <img src="${course.image}" alt="${course.title}">
+  <h4>${course.title}</h4>
+  <p>Currently In Progress</p>
+  <button class="remove-btn" data-title="${course.title}">Remove</button>
+`;
+
+card.addEventListener("click", () => {
+  const encodedTitle = encodeURIComponent(course.title);
+  window.location.href = `course-details.html?course=${encodedTitle}`;
+});
+
+}
+
+  renderEnrolledCourses();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</body>
+</html>

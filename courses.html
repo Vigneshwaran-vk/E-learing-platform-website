@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Courses</title>
+  <link rel="stylesheet" href="course.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="dashboard-container">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="assets/Logo.jpeg" alt="Bridgeloop Logo" />
+    </div>
+    <nav class="sidebar-menu">
+      <a href="dashboard.html"><i class="ri-dashboard-line"></i> Dashboard</a>
+      <a href="courses.html" class="active"><i class="ri-book-open-line"></i> Courses</a>
+      <a href="#"><i class="ri-task-line"></i> Assignments</a>
+      <a href="#"><i class="ri-questionnaire-line"></i> Quizzes</a>
+      <a href="#"><i class="ri-bar-chart-box-line"></i> Results</a>
+      <a href="#"><i class="ri-settings-3-line"></i> Settings</a>
+      <a href="#"><i class="ri-logout-box-line"></i> Logout</a>
+    </nav>
+  </aside>
+
+
+<div class="main-content-course">
+
+   <!-- Search Bar -->
+      <div class="search-bar">
+        <i class="ri-search-line"></i>
+        <input type="text" id="courseSearch" placeholder="Search courses, topics, or assignments...">
+      </div>
+
+<div class="main-area">
+<h2>Available Courses</h2>
+<div class="course-grid">
+<!-- 1 -->
+<div class="course-card" data-course='{"title": "HTML BASICS", "image": "assets/course-img/Html-img.webp"}'>
+  <img src="assets/course-img/Html-img.webp" alt="HTML BASICS">
+  <h4>HTML BASICS</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 2 -->
+<div class="course-card" data-course='{"title": "CSS MASTERS", "image": "assets/course-img/css-img.avif"}'>
+  <img src="assets/course-img/css-img.avif" alt="CSS MASTERS">
+  <h4>CSS MASTERS</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 3 -->
+<div class="course-card" data-course='{"title": "JAVA SCRIPT", "image": "assets/course-img/java-js.avif"}'>
+  <img src="assets/course-img/java-js.avif" alt="JAVA SCRIPT">
+  <h4>JAVA SCRIPT</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 4 -->
+<div class="course-card" data-course='{"title": "REACT.JS", "image": "assets/course-img/react-img.jpeg"}'>
+  <img src="assets/course-img/react-img.jpeg" alt="REACT.JS">
+  <h4>REACT.JS</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 5 -->
+<div class="course-card" data-course='{"title": "ANGULAR", "image": "assets/course-img/angular-img.png"}'>
+  <img src="assets/course-img/angular-img.png" alt="ANGULAR">
+  <h4>ANGULAR</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 6 -->
+<div class="course-card" data-course='{"title": "COMPLETE FRONTEND", "image": "assets/course-img/frontend-img.jpg"}'>
+  <img src="assets/course-img/frontend-img.jpg" alt="COMPLETE FRONTEND">
+  <h4>COMPLETE FRONTEND</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 7 -->
+<div class="course-card" data-course='{"title": "COMPLETE BACKEND", "image": "assets/course-img/backend-img.webp"}'>
+  <img src="assets/course-img/backend-img.webp" alt="COMPLETE BACKEND">
+  <h4>COMPLETE BACKEND</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 8 -->
+<div class="course-card" data-course='{"title": "NODE.JS & EXPRESS.JS", "image": "assets/course-img/node-exp-js.jpg"}'>
+  <img src="assets/course-img/node-exp-js.jpg" alt="NODE.JS & EXPRESS.JS">
+  <h4>NODE.JS & EXPRESS.JS</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 9 -->
+<div class="course-card" data-course='{"title": "MySQL", "image": "assets/course-img/MySQL-img.png"}'>
+  <img src="assets/course-img/MySQL-img.png" alt="MySQL">
+  <h4>MySQL</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 10 -->
+<div class="course-card" data-course='{"title": "MangoDB", "image": "assets/course-img/mangoDB-img.png"}'>
+  <img src="assets/course-img/mangoDB-img.png" alt="MangoDB">
+  <h4>MangoDB</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 11 -->
+<div class="course-card" data-course='{"title": "PHP", "image": "assets/course-img/php-img.jpg"}'>
+  <img src="assets/course-img/php-img.jpg" alt="PHP">
+  <h4>PHP</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 12 -->
+<div class="course-card" data-course='{"title": "Python Programming", "image": "assets/course-img/php-img.jpg"}'>
+  <img src="assets/course-img/python-img.jpg" alt="Python Programming">
+  <h4>Python Programming</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 13 -->
+<div class="course-card" data-course='{"title": "DBMS", "image": "assets/course-img/dbms-img.webp"}'>
+  <img src="assets/course-img/dbms-img.webp" alt="DBMS">
+  <h4>DBMS</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 14 -->
+<div class="course-card" data-course='{"title": "Computer Networks", "image": "assets/course-img/computer-net-img.png"}'>
+  <img src="assets/course-img/computer-net-img.png" alt="Computer Networks">
+  <h4>Computer Networks</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 15 -->
+<div class="course-card" data-course='{"title": "Operating System", "image": "assets/course-img/os-img.jpg"}'>
+  <img src="assets/course-img/os-img.jpg" alt="Operating System">
+  <h4>Operating System</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 16 -->
+<div class="course-card" data-course='{"title": "Software Designing", "image": "assets/course-img/software-img.jpeg"}'>
+  <img src="assets/course-img/software-img.jpeg" alt="Software Designing">
+  <h4>Software Designing</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 17 -->
+<div class="course-card" data-course='{"title": "Java", "image": "assets/course-img/java-img.png"}'>
+  <img src="assets/course-img/java-img.png" alt="Java">
+  <h4>Java</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 18 -->
+<div class="course-card" data-course='{"title": "C/C++", "image": "assets/course-img/c-c++-img.png"}'>
+  <img src="assets/course-img/c-c++-img.png" alt="C/C++">
+  <h4>C/C++</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 19 -->
+<div class="course-card" data-course='{"title": "R Programming", "image": "assets/course-img/r-img.png"}'>
+  <img src="assets/course-img/r-img.png" alt="R Programming">
+  <h4>R Programming</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 20 -->
+<div class="course-card" data-course='{"title": "Cyber Security Basics", "image": "assets/course-img/cyb-img.jpg"}'>
+  <img src="assets/course-img/cyb-img.jpg" alt="Cyber Security Basics">
+  <h4>Cyber Security Basics</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 21 -->
+<div class="course-card" data-course='{"title": "Linux Commands", "image": "assets/course-img/linux-img.avif"}'>
+  <img src="assets/course-img/linux-img.avif" alt="Linux Commands">
+  <h4>Linux Commands</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 22 -->
+<div class="course-card" data-course='{"title": "Digital Forensic", "image": "assets/course-img/digital-for-img.webp"}'>
+  <img src="assets/course-img/digital-for-img.webp" alt="Digital Forensic">
+  <h4>Digital Forensic</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 23 -->
+<div class="course-card" data-course='{"title": "Machine Learning", "image": "assets/course-img/machine-learing-img.avif"}'>
+  <img src="assets/course-img/machine-learing-img.avif" alt="Machine Learning">
+  <h4>Machine Learning</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 24 -->
+<div class="course-card" data-course='{"title": "AI Prompts", "image": "assets/course-img/AI-img.webp"}'>
+  <img src="assets/course-img/AI-img.webp" alt="AI Prompts">
+  <h4>AI Prompts</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 25 -->
+<div class="course-card" data-course='{"title": "JQuery", "image": "assets/course-img/JQuery-img.png"}'>
+  <img src="assets/course-img/JQuery-img.png" alt="JQuery">
+  <h4>JQuery</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 26 -->
+<div class="course-card" data-course='{"title": "GitHub Basics", "image": "assets/course-img/github-img.webp"}'>
+  <img src="assets/course-img/github-img.webp" alt="GitHub Basics">
+  <h4>GitHub Basics</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 27 -->
+<div class="course-card" data-course='{"title": "Django", "image": "assets/course-img/django-img.jpg"}'>
+  <img src="assets/course-img/django-img.jpg" alt="Django">
+  <h4>Django</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+<!-- 28 -->
+<div class="course-card" data-course='{"title": "TypeScript", "image": "assets/course-img/typescript-img.jpg"}'>
+  <img src="assets/course-img/typescript-img.jpg" alt="TypeScript">
+  <h4>TypeScript</h4>
+  <button class="enroll-btn">Enroll</button>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const enrollButtons = document.querySelectorAll('.enroll-btn');
+
+  enrollButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.course-card');
+      const courseData = JSON.parse(card.dataset.course);
+
+      let enrolled = JSON.parse(localStorage.getItem("enrolledCourses")) || [];
+      const exists = enrolled.find(c => c.title === courseData.title);
+      if (!exists) {
+        enrolled.push(courseData);
+        localStorage.setItem("enrolledCourses", JSON.stringify(enrolled));
+        button.textContent = "Enrolled ✔";
+        button.disabled = true;
+      } else {
+        button.textContent = "Already Enrolled";
+        button.disabled = true;
+      }
+    });
+  });
+</script>
+<script>
+  const searchInput = document.getElementById("courseSearch");
+
+  searchInput.addEventListener("input", function () {
+    const searchText = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".course-card");
+
+    cards.forEach(card => {
+      const title = card.querySelector("h4").textContent.toLowerCase();
+      if (title.includes(searchText)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
